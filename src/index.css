@@ -1,0 +1,733 @@
+@font-face {
+  font-family: 'SF UI Display';
+  src: url(../styles/assets/fonts/SFUIDisplay/SFUIDisplay.ttf);
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100vw;
+  }
+
+  .description {
+    width: 100vw;
+  }
+
+  .logo img {
+    height: 50%;
+  }
+
+  .formSubmit {
+    width: 200px;
+  }
+}
+
+body {
+  display: flex;
+
+  margin: 0;
+}
+
+
+/* App */
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+
+  padding: 40px 40px;
+}
+
+/* description */
+.description {
+  flex: 6;
+}
+
+.logo {
+  width: 474.46px;
+  height: 70px;
+}
+
+.header h4 {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+
+  margin: 40px 0;
+
+  color: #353238;
+
+}
+
+
+.text p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+
+  margin: 0 0 10px 0;
+
+  color: #353238;
+}
+
+/* form */
+
+.form {
+  display: flex;
+  flex: 4;
+}
+
+form {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 30px;
+  gap: 20px;
+
+  width: 440px;
+  height: 100%;
+
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
+  border-radius: 8px;
+
+}
+
+.formSubmit {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  padding: 18px 25px;
+
+  width: 380px;
+  height: 50px;
+
+  background: #0086A8;
+  border-radius: 8px;
+  border: none;
+}
+
+.formSubmit:hover {
+  background: #007693;
+}
+
+.formSubmit:active {
+  background: #00657E;
+  color: #FFFFFF;
+}
+
+.formSubmit:disabled {
+  background: #E3E3E3;
+  color: #828282;
+}
+
+/* NameInput */
+
+.text-input-name {
+  position: relative;
+  width: 180px;
+  height: 55px;
+}
+
+.input-name {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-name {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-name:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-name-red {
+  border: 2px solid #EB5E55;
+
+}
+
+.input-name:focus~.label-name {
+  color: #0086A8;
+}
+
+.label-name-red {
+  color: #EB5E55;
+}
+
+.input-name::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+.errorValidation {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 12px */
+
+  margin: 2px 0 0 8px;
+
+
+  color: #EB5E55;
+}
+
+/* PhoneInput */
+
+.text-input-phone {
+  position: relative;
+  width: 180px;
+  height: 55px;
+}
+
+.input-phone {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-phone {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-phone:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-phone-red {
+  border: 2px solid #EB5E55;
+
+}
+
+.input-phone:focus~.label-phone {
+  color: #0086A8;
+}
+
+.label-phone-red {
+  color: #EB5E55;
+}
+
+.input-phone::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+/* MailInput */
+
+.text-input-mail {
+  position: relative;
+  width: 180px;
+  height: 55px;
+}
+
+.input-mail {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-mail {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-mail:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-mail-red {
+  border: 2px solid #EB5E55;
+
+}
+
+.input-mail:focus~.label-mail {
+  color: #0086A8;
+}
+
+.label-mail-red {
+  color: #EB5E55;
+}
+
+.input-mail::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+/* ProfileLinkInput */
+
+.text-input-profileLink {
+  position: relative;
+  width: 180px;
+  height: 55px;
+}
+
+.input-profileLink {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-profileLink {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-profileLink:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-profileLink-red {
+  border: 2px solid #EB5E55;
+
+}
+
+.input-profileLink:focus~.label-profileLink {
+  color: #0086A8;
+}
+
+.label-profileLink-red {
+  color: #EB5E55;
+}
+
+.input-profileLink::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+/* small input */
+
+.text-input-small {
+  position: relative;
+  width: 180px;
+  height: 55px;
+}
+
+.input-small {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-small {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-small:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-small-red {
+  border: 2px solid #EB5E55;
+
+}
+
+.input-small:focus~.label-small {
+  color: #0086A8;
+}
+
+.label-small-red {
+  color: #EB5E55;
+}
+
+.input-small::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+.errorValidation {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 12px */
+
+  margin: 2px 0 0 8px;
+
+
+  color: #EB5E55;
+}
+
+/* select */
+
+.select {
+  position: relative;
+  width: 380px;
+  height: 55px;
+}
+
+select {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 15px;
+  gap: 15px;
+
+  width: 380px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 6;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.selectLabel {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+select:focus~.selectLabel {
+  display: block;
+  color: #0086A8;
+}
+
+select:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+  color: #0086A8;
+}
+
+.select-red {
+  border: 2px solid #EB5E55;
+}
+.selectLabel-red {
+color: #EB5E55;
+}
+
+.select__item {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+
+  color: #353238;
+}
+
+option:hover {
+  background: #FAFAFA;
+}
+
+.select option {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px;
+
+  width: 135px;
+  height: 130px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
+  border-radius: 8px;
+}
+
+/* bigInputt */
+
+.text-input-big {
+  position: relative;
+  width: 380px;
+  height: 55px;
+}
+
+.input-big {
+  box-sizing: border-box;
+
+  padding: 18px 15px;
+  gap: 10px;
+
+  width: 380px;
+  height: 50px;
+
+  background: #FFFFFF;
+  border: 2px solid #E3E3E3;
+  border-radius: 8px;
+}
+
+.label-big {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #828282;
+
+  background-color: #fff;
+
+  padding: 0 5px;
+}
+
+.input-big:focus {
+  border: 2px solid #0086A8;
+  outline: 0;
+}
+
+.input-big:focus~.label-big {
+  color: #0086A8;
+}
+
+.input-big::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+
+  letter-spacing: 0.25px;
+
+  color: #CDCAD0;
+}
+
+/* AdditionalFields */
+.AdditionalFields,
+.formAdditional {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+.headerAdditionalFields {
+  display: flex;
+  cursor: pointer;
+}
+
+.textHeader {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+
+  margin-right: 8px;
+
+  color: #353238;
+}

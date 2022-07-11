@@ -1,7 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import formReduser from "./redusers/formSlice";
+import validationReduser from "./redusers/validationSlice";
 
 const rootReduser = combineReducers({
-
+    formReduser,
+    validationReduser,
 })
 
 export const setupStore = () => {
